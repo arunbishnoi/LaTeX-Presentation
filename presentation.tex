@@ -1,0 +1,228 @@
+\documentclass{beamer} 
+% beamer class is used for making presentations
+\usepackage{graphicx}
+
+%\usepackage{helvet}
+%\usefonttheme{serif}
+
+\usepackage{verbatim}
+
+\usetheme{Warsaw}
+%Different theme packages can be used like Hannover, Madrid, Singapore
+
+\usepackage{beamerthemesplit}
+
+\useoutertheme[subsection=false]{smoothbars}
+\usecolortheme{crane} 
+
+\graphicspath{{images/}}
+%for providing path for images to be used in the slides (needed only once)
+
+
+\begin{document}
+%to start a document, whatever you want to display in the pdf document
+
+
+\title{MAKING A POWERPOINT-Like PRESENTATION WITH \LaTeX}
+\author{{\color{red}{\textbf{\textit{Arun}}}}  \\ \color{brown}\& \\  {\color{violet}{\textbf{\textit{Gunpreet}}}}}
+%\setbeamertemplate{background}
+                %{\includegraphics[width=\paperwidth,height=\paperheight]{i.jpg}}
+% preamble for titlepage
+
+%Frame tag is used to create a slide. Frame can be given a title using frametitle tag
+        \begin{frame}
+        \transblindshorizontal
+            \titlepage
+        \end{frame}
+        %call preamble which is the very first page of the document
+
+        
+        \begin{frame}[shrink]
+        \frametitle{Table of Contents}
+        \transblindsvertical
+                \tableofcontents{}
+        \end{frame}
+
+        
+        \section{Basics}
+        %Divides the document into chapters
+        \setbeamertemplate{background}
+                %{\includegraphics[width=\paperwidth,height=\paperheight]{o.jpg}}
+
+            \subsection{Introduction}
+
+            \subsubsection{Briefing You}
+            \begin{frame}
+            \frametitle{Briefing You}
+            \transboxin
+
+                \textsl{\textbf{\LaTeX} is a \textbf{document preparation} system for high-quality typesetting. It is most often used for medium-to-large technical or scientific documents but it can be used for almost any form of publishing.}
+            \end{frame}
+            
+            \subsubsection{Need}
+            \begin{frame}[shrink]
+            \frametitle{Need}
+            \transboxout
+                \begin{block}{
+                    \textbf{\textsl{``If a document looks good artistically, it is well designed."}}
+                    }
+                \end{block}
+                As a document has to be read and not hung up in a picture gallery, the readability and understandability is much more important than the beautiful look of it.
+
+                Examples:
+                \begin{itemize}
+                    \item The font size and the numbering of headings have to be chosen to make the structure of chapters and sections clear to the reader. 
+                    \item The line length has to be short enough not to strain the eyes of the reader, while long enough to fill the page beautifully.
+                \end{itemize}
+                If you want your document to look really beautiful then LATEX is the natural choice.
+            \end{frame}
+
+            \subsubsection{Advantages}
+            \begin{frame}
+            \frametitle{Advantages}
+            \transwipe
+                \begin{itemize}
+                    \item The typesetting of mathematical formulae is supported in a convenient way.
+                    \item Even complex structures such as footnotes, references, table of contents, and bibliographies can be generated easily.
+                    \item \LaTeX encourages authors to write well-structured texts, because this is how \LaTeX works—by specifying structure.
+                    \item Professionally crafted layouts are available, which make a document really look as if “printed.”
+                \end{itemize}
+            \end{frame}
+
+            \subsubsection{Your First Step}
+            \begin{frame}[shrink]
+            \frametitle{Your First Step}
+            \transfade
+                \begin{block}{
+                    Installation Command:} sudo apt-get install texlive-full
+                \end{block}
+                \begin{block}
+                    {File Extension:} 
+                    .tex
+                \end{block}
+                \begin{block}{
+                    Conversion to pdf:} 
+                    pdflatex filename.tex
+                \end{block}
+            \end{frame}
+            
+        \section{\LaTeX}
+
+            \subsection{Basic Structure}
+           %\setbeamertemplate{background}
+            %{\includegraphics[width=\paperwidth,height=\paperheight]{gg.jpg}}
+                \begin{frame}[shrink]
+                \frametitle{Basic Structure}
+                \transdissolve
+                    \begin{block}{Syntax}
+                        \verbatiminput{v2.tex}
+                    \end{block}
+                \end{frame}
+
+            \subsection{Titlepage}
+           % \setbeamertemplate{background}
+            %{\includegraphics[width=\paperwidth,height=\paperheight]{gg.jpg}}
+                \begin{frame}[shrink]
+                \frametitle{Adding Titlepage}
+                \transblindsvertical
+                    \begin{block}{Syntax}
+                        \verbatiminput{v1.tex}
+                    \end{block}
+                \end{frame}
+
+            \subsection{section}
+            %\setbeamertemplate{background}
+            %{\includegraphics[width=\paperwidth,height=\paperheight]{gg.jpg}}
+                \begin{frame}[shrink]
+                \frametitle{Making Chapters}
+                \transwipe
+                    \begin{block}{Syntax}
+                        \verbatiminput{v3.tex}
+                    \end{block}
+                \end{frame}
+
+            \subsection{Themes}
+            %\setbeamertemplate{background}
+            %{\includegraphics[width=\paperwidth,height=\paperheight]{gg.jpg}}
+                \begin{frame}[shrink]
+                \frametitle{Playing with Themes}
+                \transboxout
+                    \begin{block}{Syntax}
+                        \verbatiminput{v4.tex}
+                    \end{block}
+                   {\color{white}Some commonly used \textbf{themes} are: \textit{Madrid, Singapore, Hannover}, etc.}
+                \end{frame}
+
+            \subsection{Images}
+           % \setbeamertemplate{background}
+            %{\includegraphics[width=\paperwidth,height=\paperheight]{c.jpg}}
+            \subsubsection{Insert Images}
+                \begin{frame}[shrink]
+                \frametitle{Implementing Images}
+                \transboxin
+                    \begin{block}{Syntax}
+                        \verbatiminput{v5.tex}
+                    \end{block}
+                \end{frame}
+
+            \subsubsection{Background Image}
+                \begin{frame}[shrink]
+                \frametitle{Background Image}                    
+                \transwipe
+                    \begin{block}{Syntax}
+                        \verbatiminput{v6.tex}
+                    \end{block}
+                \end{frame}
+
+            \subsubsection{Background Color}
+                    \begin{frame}[shrink]
+                    \frametitle{Background Color}
+                    \transboxin
+                        \begin{block}{Syntax}
+                            \verbatiminput{v7.tex}
+                        \end{block}
+                    \end{frame}
+
+            \subsection{Bullets and Numbering}
+            %\setbeamertemplate{background}
+            %{\includegraphics[width=\paperwidth,height=\paperheight]{b.png}}
+                \begin{frame}
+                \frametitle{Itemize}
+                \transboxout
+                    \begin{columns}
+                    \column{0.48\textwidth}
+                        \begin{block}{Syntax}
+                            \verbatiminput{v9.tex}
+                        \end{block}
+            
+                    \column{0.48\textwidth}
+                        \begin{block}{Syntax}
+                            \verbatiminput{v8.tex}
+                        \end{block}
+                    \end{columns}
+                \end{frame}
+
+            \subsection{Transitions}
+            %\setbeamertemplate{background}
+            %{\includegraphics[width=\paperwidth,height=\paperheight]{b.png}}
+                \begin{frame}
+                \frametitle{Transitions}
+                \transwipe
+                \begin{block}{Syntax}
+                        \verbatiminput{v0.tex}        
+                    \end{block}
+                    You can apply various transitions on slides like transblindshorizontal, transblindsvertical, transboxin, transboxout, transdissolve, transglitter, transslipverticalin, ransslipverticalout, transhorizontalin, transhorizontalout, transwipe. Automatic slide transition from one slide to another can be done using the command ``transduration{2}''
+                    
+                \end{frame}
+
+
+    \section{Thanks} 
+        %\setbeamertemplate{background}
+                %{\includegraphics[width=\paperwidth,height=\paperheight]{t.png}}
+                \begin{frame}
+                \frametitle{}
+                    %\includegraphics[width=5cm, height=2cm]{th.jpg} \\
+                    \color{yellow}\textbf{\textrm{\LARGE{SHUKRIYA}}}
+                \end{frame}
+
+    \end{document}
